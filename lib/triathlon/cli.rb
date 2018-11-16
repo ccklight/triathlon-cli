@@ -10,7 +10,7 @@ class Triathlon::CLI
 
     def start
       puts ""
-      puts "In which city would you like to race?"
+      puts "In which location would you like to race?"
       input = gets.strip
 
       print_races(input)
@@ -19,7 +19,7 @@ class Triathlon::CLI
 
       print_race(race)
       puts ""
-      puts "Would you like to see a race in another city?  Enter "Y" or "N"
+      puts "Would you like to see a race in another location?  Enter "Y" or "N"
 
       input = gets.strip.downcase
       if input == "Y"
@@ -38,9 +38,9 @@ class Triathlon::CLI
 
       def print_races(race)
         puts ""
-        puts" #{race.city}
+        puts" #{race.location}
 
         puts ""
-        puts "City: #{race.city}"
+        puts "location: #{race.location}"
         puts "Website:  #{race.website_url}"
       end
