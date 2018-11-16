@@ -38,4 +38,16 @@ module Triathlon
         puts ""
         puts "I don't uderstand that answer."
         start
-      end 
+      end
+    end
+
+      def print_races(race)
+        puts""
+        puts"-----------#{race.type} - #{race.city}--------
+
+        puts ""
+        puts "Type:   #{race.type}"
+        puts "City: #{race.city}"
+        puts "Website:  #{race.website_url}"
+      end
+      
