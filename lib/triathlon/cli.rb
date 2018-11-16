@@ -10,7 +10,9 @@ class Triathlon::CLI
 
     def start
       puts ""
-      puts "In which location would you like to race?"
+      puts "In what location would you like to race? Please select a location."
+        1. 2019 High School National Championships, Tempe, AZ
+        2. 2019 Duathlon National Championships Piedmont, SC 
       input = gets.strip
 
       print_races(input)
