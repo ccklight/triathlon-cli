@@ -25,4 +25,17 @@ module Triathlon
       print_race(race
       puts ""
       puts "Would you like to see a race in another city?  Enter Y or N"
-      
+
+      input = gets.strip.downcase
+      if input == "Y"
+        start
+      elsif input == "N"
+        puts ""
+        puts "Thank you! Have a great day."
+        exit
+
+      else
+        puts ""
+        puts "I don't uderstand that answer."
+        start
+      end 
