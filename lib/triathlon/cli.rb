@@ -1,11 +1,10 @@
 require "triathlon/cli/version"
+require 'pry'
+class Triathlon::CLI
 
-module Triathlon
-  module Cli
-    class Error < StandardError; end
-    def call
+    def call                #the call method starts the CLI
       Triathlon::Scraper.new.make_triathlons
-      puts "Welcome. "
+      puts "Welcome to sprint distance triathlon racing."
       start
     end
 
@@ -18,9 +17,9 @@ module Triathlon
 
       race = Triathlons::Triathlon.find(input)
 
-      #print_race(race)
-      #puts ""
-      #puts "Would you like to see a race in another city?  Enter Y or N"
+      print_race(race)
+      puts ""
+      puts "Would you like to see a race in another city?  Enter "Y" or "N"
 
       input = gets.strip.downcase
       if input == "Y"
@@ -38,7 +37,7 @@ module Triathlon
     end
 
       def print_races(race)
-        puts""
+        puts ""
         puts" #{race.city}
 
         puts ""

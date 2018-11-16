@@ -1,12 +1,13 @@
 class Triathlon::Races
 
-  attr_accessor :type, :location, :website  
+  attr_accessor  :location
+  attr_reader :website  
 
   @@all = []
 
   def self.new_from_index_page(r)
     self.new(
-    xxxxxxxxxxx
+
 
     )
   end
@@ -20,12 +21,9 @@ class Triathlon::Races
   end
 
   def self.find(id)
-    xxxxxxxxxxx
-  end
-
-  def type
 
   end
+
 
   def location
 
