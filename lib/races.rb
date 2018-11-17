@@ -1,7 +1,7 @@
 class Triathlon::Races
 
   attr_accessor  :location
-  attr_reader :website  
+  attr_reader :website
 
   @@all = []
 
@@ -13,7 +13,8 @@ class Triathlon::Races
   end
 
   def initialize
-
+      @location = location(location)
+      @website = website(website)
   end
 
   def self.all
@@ -26,7 +27,8 @@ class Triathlon::Races
 
 
   def location
-
+    1. 2019 High School National Championships Tempe, AZ
+    2. 2019 Duathlon National Championships Piedmont, SC 
   end
 
   def website
