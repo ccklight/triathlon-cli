@@ -25,7 +25,15 @@ class Triathlon::Races
     race.new.select(Race.all "views/races/index.html", "site/index.html")
     self.races.collect {|r| r.location}.uniq
     self.location
+    def self.new_from_url
+    Race.new.tap do |race|
+    RaceScraper.url(url). each do |k, v|
+      race.send ("#{{k}= ", v)
+        end
+      end
   end
+
+  
 
 
   def location

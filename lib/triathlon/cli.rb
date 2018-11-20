@@ -10,16 +10,15 @@ class Triathlon::CLI
 
     def start
       puts ""
-      puts "In what location would you like to race? Please select a location."
-        1. 2019 High School National Championships, Tempe, AZ
-        2. 2019 Duathlon National Championships Piedmont, SC 
+      puts "Where would you like to race? Please select a location."
+        1. 2019 High School National Championships, Tempe, AZ   #pseudocode for scrape
+        2. 2019 Duathlon National Championships Piedmont, SC    #pseudocode for scrape
       input = gets.strip
-
-      print_races(input)
 
       race = Triathlons::Triathlon.find(input)
 
-      print_race(race)
+      print_race(input)
+
       puts ""
       puts "Would you like to see a race in another location?  Enter "Y" or "N"
 
@@ -38,11 +37,12 @@ class Triathlon::CLI
       end
     end
 
-      def print_races(race)
+      def print_race(race)
         puts ""
         puts" #{race.location}
 
         puts ""
         puts "location: #{race.location}"
-        puts "Website:  #{race.website_url}"
+
+        ****LOOP HERE ABOUT LOCATION?****
       end
