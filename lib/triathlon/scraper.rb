@@ -1,7 +1,6 @@
 class Triathlon::Scraper
 require_relative '../lib/scraper.rb'
-require_relative "../lib/student.rb"
-require_relative "./triathlon/version"
+require_relative "./triathlon/cli/version.rb"
 require 'pry'
 require 'nokogiri'
 require 'open-uri'
@@ -47,3 +46,20 @@ end
     end
   end
 end
+
+
+# Katleiah's Help:
+# Class Scraper
+#   def self.create_races
+#
+#   [["Chicago", "chicagosrace.com"],["Philly", "phillysraces.com"],["New York", "Newyorkraces.com"]].each do |race|
+#
+#     #race -> ["Chicago", "chicagosrace.com"]
+#       race = Race.new(race[0],race[1])
+#
+#     end
+#
+#   end
+# end
+
+# Scraper.create_race
