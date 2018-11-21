@@ -1,21 +1,29 @@
-class Triathlon::Scraper
+class Scrape
 require_relative '../lib/scraper.rb'
 require_relative "./triathlon/cli/version.rb"
-require 'pry'
+require "triathlon/cli"
+
 require 'nokogiri'
 require 'open-uri'
 require 'colorize'
 
-class CommandLineInterface
-  BASE_PATH = "./fixtures/student-site/"
+require 'pry'
+
+require "bundler/setup"
+bundle install
+chmod triathlon-cli
+
+
+#class CommandLineInterface
+  #BASE_PATH = "./fixtures/student-site/"
 
 
   def get_page(page)
-    Nokogiri:: HTML (open(URL))
+    Nokogiri:: HTML (open("https://www.usa-triathlon"))
   end
 
 
-  def scrape (index)
+  def scrape(index)
     gets.strip www.teamusa.org/usa-triathlon
     self.get_page.css(index)
   end
@@ -35,18 +43,12 @@ Southeast Region Scrape: <a href="/USA-Triathlon/Regions/Southeast" target="_sel
 South Central Region Scrape:  <a href="/USA-Triathlon/Regions/South-Central" target="_self">South Central</a>
 Western Region Scrape:  <a href="/USA-Triathlon/Regions/West" target="_self">West</a>
 
-
 end
-
-
-
-
     scrape_races_index.each do |r|
       xxxxxxxxxxx
     end
   end
 end
-
 
 # Katleiah's Help:
 # Class Scraper
